@@ -138,7 +138,7 @@ void control_data_base::update_client(int client_id, std::string field, std::str
 
 				std::istringstream iss(input_str);
 
-				if (!(iss >> sequence_number)) {
+				if (!(iss >> sequence_number && iss.eof())) {
 					std::cout << "Uncorrect input! Try again..." << std::endl;
 				}
 				else if (sequence_number > count_phone_numbers) {
