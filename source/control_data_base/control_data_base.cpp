@@ -136,7 +136,7 @@ void control_data_base::update_client(int client_id, std::string field, std::str
 				std::cout << "Input sequence number: ";
 				std::getline(std::cin, input_str);
 
-				std::istringstream iss(input_str);
+				std::stringstream iss(input_str);
 
 				if (!(iss >> sequence_number && iss.eof())) {
 					std::cout << "Uncorrect input! Try again..." << std::endl;
@@ -207,7 +207,7 @@ void control_data_base::delete_phone_for_client(int client_id) {
 			std::cout << "Input sequence number: ";
 			std::getline(std::cin, input_str);
 
-			std::istringstream iss(input_str);
+			std::stringstream iss(input_str);
 
 			if (!(iss >> sequence_number && iss.eof())) {
 				std::cout << "Uncorrect input! Try again..." << std::endl;
